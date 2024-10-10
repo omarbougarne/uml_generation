@@ -12,6 +12,11 @@
     </div>
 
     <script>
+        const box =  {
+            name: "className", 
+            attributes: ['att1' , 'att2', 'att3'],
+            functionalities: ['func1' , 'func2', 'func3']
+        }
         
         for(let i = 0; i<3; i++){
             //class name
@@ -25,14 +30,13 @@
         const subDiv = document.createElement("div");
         const subContent = document.createTextNode('Attributes');
         subDiv.appendChild(subContent);
-        
         div.appendChild(subDiv)
+
         //functions
         for(let i = 0; i<3; i++){
         const functions = document.createElement("div");
         const functionsContent = document.createTextNode('Funcionalities');
         functions.appendChild(functionsContent);
-        
         div.appendChild(functions)
         }
         }
