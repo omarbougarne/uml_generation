@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main">
+
+    </div>
+
+    <script>
+        
+        for(let i = 0; i<3; i++){
+            //class name
+        const div = document.createElement("div");
+        const content = document.createTextNode('Class');
+        div.appendChild(content);
+        const main = document.getElementById("main")
+        main.appendChild(div)
+        //attributes
+        for(let i = 0; i<3; i++){
+        const subDiv = document.createElement("div");
+        const subContent = document.createTextNode('Attributes');
+        subDiv.appendChild(subContent);
+        
+        div.appendChild(subDiv)
+        //functions
+        for(let i = 0; i<3; i++){
+        const functions = document.createElement("div");
+        const functionsContent = document.createTextNode('Funcionalities');
+        functions.appendChild(functionsContent);
+        
+        div.appendChild(functions)
+        }
+        }
+        }
+        
+
+        
+        
+    </script>
+</body>
+</html>
