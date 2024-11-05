@@ -8,62 +8,42 @@
 </head>
 <body>
     <div id="main">
-        <!-- <div id="sub">
-            <div id="att"></div>
-        </div> -->
+        <button class="add-class" onclick="addClass()">Add Class</button>
+        <div id="class"></div>
     </div>
 
     <script>
-        const box =  {
-            name: "className", 
-            attributes: ['att1' , 'att2', 'att3'],
-            functionalities: ['func1' , 'func2', 'func3']
+       function addClass(){
+        const mainDiv = document.getElementById('class')
+        const div = document.createElement("div")
+        const text = document.createTextNode("class")
+        div.appendChild(text)
+        mainDiv.appendChild(div)
+        const button = document.createElement("button")
+        button.textContent = 'Attribute'
+        div.appendChild(button)
+        const input = document.createElement("input")
+        input.setAttribute('type', 'text')
+        input.setAttribute('placeholder', 'text')
+        div.appendChild(input)
+        //attribute
+        button.onclick = function addClass(){
+        const div = document.createElement("div")
+        const text = document.createTextNode("attribute")
+        div.appendChild(text)
+        mainDiv.appendChild(div)
+        const button = document.createElement("button")
+        button.textContent = 'Attribute'
+        div.appendChild(button)
+        const input = document.createElement("input")
+        input.setAttribute('type', 'text')
+        input.setAttribute('placeholder', 'text')
+        div.appendChild(input)
         }
         
-        for(let i = 0; i<3; i++){
-            
-        const div = document.createElement("div");
-        const content = document.createTextNode('Class');
-        div.appendChild(content);
-        const main = document.getElementById("main")
-        main.appendChild(div)
-        div.setAttribute("id", i);
-        
-        for(let i = 0; i<3; i++){
-            const button = document.createElement("button");
-            button.textContent = 'Add'
-            button.onclick = console.log('i got')
-    const subDiv = document.createElement("input");
-    subDiv.setAttribute('type', 'text');
-    subDiv.setAttribute('value', 'Attributes');
-    subDiv.setAttribute('class', `atrribute${i}`)
-    subDiv.setAttribute("id", `atrribute${i}`);
-    div.appendChild(subDiv)
-    div.appendChild(button)
-    
-    }
-    
-    for(let i = 0; i<3; i++){
-        const functions = document.createElement("input");
-        functions.setAttribute('type', 'text')
-        functions.setAttribute('value', 'functionalities')
-        functions.setAttribute('class', `functionality${i}`)
-        functions.setAttribute("id", `functionality${i}`);
-        div.appendChild(functions)
-        
-    }
+       }
 
-        
-        
-        
-    }
-
-
-    
-    
-    
-    
-        
+ 
     </script>
 </body>
 </html>
