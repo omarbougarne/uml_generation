@@ -29,7 +29,7 @@ function addClass(){
     const text = document.createTextNode("attribute")
 
     label.appendChild(text)
-    mainDiv.appendChild(label)
+    div.appendChild(label)
 
     const input = document.createElement("input")
     input.setAttribute('type', 'text')
